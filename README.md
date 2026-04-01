@@ -16,6 +16,19 @@ A structured series of full-stack training tasks for interns learning Angular an
 
 ---
 
+## Prerequisites — Suggested Learning Resources
+
+Before starting the tasks, watch the following videos to get familiar with the required technologies:
+
+| Topic | Resource |
+|---|---|
+| TypeScript | [TypeScript Full Course](https://www.youtube.com/watch?v=mo409tfQSSM) |
+| Angular | [Angular Full Course](https://www.youtube.com/watch?v=bW5h7gsufbk) |
+| Angular Reactive Forms | [Angular Reactive Forms](https://www.youtube.com/watch?v=U9Xo0wXZIAg&pp=ygUWYW5ndWxhciByZWFjdGl2ZSBmb3Jtcw%3D%3D) |
+| Install npm | [How to Install npm](https://www.youtube.com/watch?v=w4Xm46_UmJM&pp=ygUMaW5zdGFsbCBucG0g) |
+
+---
+
 ## Tasks
 
 | # | Task | Level | Days | Status |
