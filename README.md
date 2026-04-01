@@ -21,8 +21,8 @@ A structured series of full-stack training tasks for interns learning Angular an
 | # | Task | Level | Days | Status |
 |---|---|---|---|---|
 | 01 | [Add Product](tasks/task-01-add-product.md) | 🟢 Beginner | 4 Days | ✅ Available |
-| 02 | Soft Delete, Interceptor & Delete Endpoint | 🟡 Beginner to Intermediate | 1–2 Days | 🔒 Locked |
-| 03 | Display Products + Pagination | 🟡 Beginner to Intermediate | 3 Days | 🔒 Locked |
+| 02 | Display Products + Pagination | 🟡 Beginner to Intermediate | 3 Days | 🔒 Locked |
+| 03 | Soft Delete, Interceptor & Delete Endpoint | 🟡 Beginner to Intermediate | 1–2 Days | 🔒 Locked |
 | 04 | Change Product Status + Audit History | 🟡 Intermediate | 3 Days | 🔒 Locked |
 | 05 | Refactor and Apply CQRS | 🔴 Advanced | 4 Days | 🔒 Locked |
 | 06 | Add Roles and Claims | 🟡 Intermediate | 3 Days | 🔒 Locked |
