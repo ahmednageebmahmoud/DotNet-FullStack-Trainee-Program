@@ -1,5 +1,5 @@
 # Ignore all task files except Task 01
-tasks/task-02-*.md
+# tasks/task-02-*.md
 tasks/task-03-*.md
 tasks/task-04-*.md
 tasks/task-05-*.md
