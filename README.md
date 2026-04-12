@@ -34,9 +34,9 @@ Before starting the tasks, watch the following videos to get familiar with the r
 | # | Task | Level | Days | Status |
 |---|---|---|---|---|
 | 01 | [Add Product](tasks/task-01-add-product.md) | 🟢 Beginner | 4 Days | ✅ Available |
-| 02 | [Display Products + Pagination](tasks/task-02-display-products.md) | 🟡 Beginner to Intermediate | 3 Days | 🔒 Locked |
-| 03 | [Soft Delete, Interceptor & Delete Endpoint](tasks/task-03-soft-delete-interceptor.md) | 🟡 Beginner to Intermediate | 1–2 Days | 🔒 Locked |
-| 04 | [Change Product Status + Audit History](tasks/task-04-change-product-status.md) | 🟡 Intermediate | 3 Days | 🔒 Locked |
+| 02 | [Display Products + Pagination](tasks/task-02-display-products.md) | 🟡 Beginner to Intermediate | 3 Days | ✅ Available |
+| 03 | [Soft Delete, Interceptor & Delete Endpoint](tasks/task-03-soft-delete-interceptor.md) | 🟡 Beginner to Intermediate | 1–2 Days | ✅ Available |
+| 04 | [Change Product Status + Audit History](tasks/task-04-change-product-status.md) | 🟡 Intermediate | 3 Days | ✅ Available |
 | 05 | Refactor and Apply CQRS | 🔴 Advanced | 4 Days | 🔒 Locked |
 | 06 | Add Roles and Claims | 🟡 Intermediate | 3 Days | 🔒 Locked |
 | 07 | Add Users | 🟡 Intermediate | 3 Days | 🔒 Locked |
