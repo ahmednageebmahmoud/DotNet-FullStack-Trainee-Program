@@ -27,13 +27,12 @@ This is a training plan for interns. They will build apps with Angular and Tailw
 | 03 | [Soft Delete, Interceptor & Delete Endpoint](task-03-soft-delete-interceptor.md) | 🟡 Beginner to Intermediate | 1–2 Days | Task 01 + Task 02 |
 | 04 | [Change Product Status + Audit History](task-04-change-product-status.md) | 🟡 Intermediate | 3 Days | Task 01 + Task 02 + Task 03 |
 | 05 | [Refactor and Apply CQRS](task-05-cqrs-refactor.md) | 🔴 Advanced | 4 Days | Task 01 + Task 02 + Task 03 + Task 04 |
-| 06 | [Add Roles and Claims](task-06-roles-and-permissions.md) | 🟡 Intermediate | 3 Days | Task 05 |
-| 07 | [Add Users](task-07-add-users.md) | 🟡 Intermediate | 3 Days | Task 06 |
-| 08 | [Login with JWT and Cookie](task-08-login-jwt.md) | 🟡 Intermediate | 3 Days | Task 07 |
-| 09 | [Apply Authorization](task-09-apply-authorization.md) | 🔴 Advanced | 5 Days | Task 08 |
-| 10 | [Statistics Dashboard](task-10-statistics-dashboard.md) | 🟡 Intermediate | 3 Days | Task 09 |
+| 06 | [Add Roles, Claims & Users](task-06-roles-and-users.md) | 🟡 Intermediate | 5 Days | Task 05 |
+| 07 | [Login with JWT and Cookie](task-07-login-jwt.md) | 🟡 Intermediate | 3 Days | Task 06 |
+| 08 | [Apply Authorization](task-08-apply-authorization.md) | 🔴 Advanced | 5 Days | Task 07 |
+| 09 | [Statistics Dashboard](task-09-statistics-dashboard.md) | 🟡 Intermediate | 3 Days | Task 08 |
 
-**Total time: about 32–33 work days (about 6–7 weeks)**
+**Total time: about 31–32 work days (about 6–7 weeks)**
 
 ---
 
@@ -43,9 +42,9 @@ This is a training plan for interns. They will build apps with Angular and Tailw
 Week 1-2:  Task 01 + Task 02 + Task 03  -> Basics (CRUD + Soft Delete + Pagination)
 Week 3:    Task 04                       -> Enums + Audit History
 Week 4:    Task 05                       -> CQRS + MediatR
-Week 5:    Task 06 + Task 07             -> Identity + Users
-Week 6:    Task 08 + Task 09             -> JWT + Authorization
-Week 7:    Task 10                       -> Dashboard + Final Polish
+Week 5:    Task 06                       -> Identity + Roles + Users
+Week 6:    Task 07 + Task 08             -> JWT + Authorization
+Week 7:    Task 09                       -> Dashboard + Final Polish
 ```
 
 ---
