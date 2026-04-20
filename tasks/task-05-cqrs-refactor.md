@@ -95,7 +95,6 @@ YourProject/                                    ← single ASP.NET Core Web API 
 │
 ├── Contracts/                                  ← request and response DTOs
 │   └── Products/
-│       ├── CreateProductRequest.cs
 │       ├── ProductResponse.cs
 │       └── PaginatedResult.cs
 │
