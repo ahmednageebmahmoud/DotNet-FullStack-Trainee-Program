@@ -38,7 +38,7 @@ Before starting the tasks, watch the following videos to get familiar with the r
 | 03 | [Soft Delete, Interceptor & Delete Endpoint](tasks/task-03-soft-delete-interceptor.md) | 🟡 Beginner to Intermediate | 1–2 Days | ✅ Available |
 | 04 | [Change Product Status + Audit History](tasks/task-04-change-product-status.md) | 🟡 Intermediate | 3 Days | ✅ Available |
 | 05 | [Refactor and Apply CQRS](tasks/task-05-cqrs-refactor.md) | 🔴 Advanced | 4 Days | ✅ Locked |
-| 06 | Add Roles, Claims & Users | 🟡 Intermediate | 5 Days | ✅ Available |
+| 06 | [Add Roles, Claims & Users](tasks/task-06-roles-and-users.md) | 🟡 Intermediate | 5 Days | ✅ Available |
 | 07 | Login with JWT and Cookie | 🟡 Intermediate | 3 Days | 🔒 Locked |
 | 08 | Apply Authorization | 🔴 Advanced | 5 Days | 🔒 Locked |
 | 09 | Statistics Dashboard | 🟡 Intermediate | 3 Days | 🔒 Locked |
