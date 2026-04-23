@@ -40,8 +40,8 @@ Before starting the tasks, watch the following videos to get familiar with the r
 | 05 | [Refactor and Apply CQRS](tasks/task-05-cqrs-refactor.md) | 🔴 Advanced | 4 Days | ✅ Locked |
 | 06 | [Add Roles, Claims & Users](tasks/task-06-roles-and-users.md) | 🟡 Intermediate | 5 Days | ✅ Available |
 | 07 | [Login with JWT and Cookie](tasks/task-07-login-jwt.md) | 🟡 Intermediate | 3 Days | ✅ Available |
-| 08 | Apply Authorization | 🔴 Advanced | 5 Days | 🔒 Locked |
-| 09 | Statistics Dashboard | 🟡 Intermediate | 3 Days | 🔒 Locked |
+| 08 | [Apply Authorization](tasks/task-08-apply-authorization.md) | 🔴 Advanced | 5 Days | ✅ Available |
+| 09 | [Statistics Dashboard](tasks/task-09-statistics-dashboard.md) | 🟡 Intermediate | 3 Days | ✅ Available |
 
 > Locked tasks will be released one by one as each task is completed and reviewed.
 
