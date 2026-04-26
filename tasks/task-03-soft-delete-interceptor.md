@@ -8,25 +8,20 @@
 |---|---|
 | **Level** | 🟡 Beginner to Intermediate |
 | **Estimated Duration** | 1–2 Days |
-| **Type** | Full Stack |
-| **Depends On** | Task 01 — Add Product, Task 02 — Display Products |
+| **Type** | Backend Only |
+| **Depends On** | Task 01 — Add Product API & Persistence, Task 02 — Display Products API + Pagination |
 | **Deliverable** | Reusable soft delete infrastructure + audit auto-fill via interceptor + delete endpoint |
+| **Frontend Follow-Up** | Task 14 — Soft Delete UX |
 
 ---
 
 ## Goal
 
-Build the shared infrastructure for soft delete and auditing so all future entities can inherit from it. Use a `SaveChanges` interceptor to automatically fill audit fields (`CreatedAt`, `UpdatedAt`, `IsDeleted`, `DeletedAt`) without repeating that logic in every service or handler.
+Build the shared backend infrastructure for soft delete and auditing so all future entities can inherit from it. Use a `SaveChanges` interceptor to automatically fill audit fields (`CreatedAt`, `UpdatedAt`, `IsDeleted`, `DeletedAt`) without repeating that logic in every service or handler.
 
 ---
 
 ## Required Technologies
-
-### Frontend — Angular
-| Technology | Description |
-|---|---|
-| **HttpClient** | Call the DELETE endpoint |
-| **Confirm Dialog** | Ask user to confirm before deleting |
 
 ### Backend — ASP.NET Core
 | Technology | Description |
@@ -39,11 +34,6 @@ Build the shared infrastructure for soft delete and auditing so all future entit
 ---
 
 ## Deliverables
-
-### Frontend — Angular
-- [ ] Add a delete button on the product list and/or detail page
-- [ ] Show a confirm dialog before sending the delete request
-- [ ] Remove the product from the list after a successful delete
 
 ### Backend — ASP.NET Core
 - [ ] Create `SoftDeleteEntity` base class that extends `AuditableEntity` (from Task 01) and adds `IsDeleted`, `DeletedAt`
@@ -102,21 +92,16 @@ Products
 | `UpdatedAt` | Must be updated automatically on every modify |
 | `IsDeleted` | Must be set by the interceptor, not by service code |
 | Global filter | All queries must exclude soft-deleted rows by default |
-| Delete | Return 404 if product does not exist |
-| Delete | Return 404 if product is already deleted |
-| Before delete | Frontend must show a confirm dialog |
+| Delete | Return `404 Not Found` if product does not exist |
+| Delete | Return `404 Not Found` if product is already deleted |
 
 ---
 
 ## Tips
 
-### Frontend
-1. Use a modal or dialog for the delete confirmation.
-2. After a successful delete, reload the product list or navigate back.
-
 ### Backend
-1. Use `SaveChangesInterceptor` (not override `SaveChanges`) so the logic works with DI and async.
-2. Keep `CreatedBy` / `UpdatedBy` as a separate concern — fill them from `ICurrentUserService` or `IHttpContextAccessor` in the interceptor.
-3. The global query filter runs automatically — no need to add `.Where(x => !x.IsDeleted)` everywhere.
+1. Use `SaveChangesInterceptor` instead of overriding `SaveChanges` so the logic works with DI and async.
+2. Keep `CreatedBy` and `UpdatedBy` as a separate concern; fill them from `ICurrentUserService` or `IHttpContextAccessor` in the interceptor.
+3. The global query filter runs automatically, so you do not need to add `.Where(x => !x.IsDeleted)` everywhere.
 4. Add a migration after updating the `Product` entity.
 5. Test that a soft-deleted product does not appear in any GET query.

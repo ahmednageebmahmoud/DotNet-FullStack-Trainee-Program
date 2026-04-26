@@ -11,6 +11,7 @@
 | **Type** | Backend Only |
 | **Depends On** | Task 01 + Task 02 + Task 03 + Task 04 |
 | **Deliverable** | Backend refactor with CQRS and MediatR |
+| **Frontend Follow-Up** | None. This task prepares the backend architecture used by later frontend tasks. |
 
 ---
 

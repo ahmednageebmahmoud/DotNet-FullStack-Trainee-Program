@@ -1,4 +1,4 @@
-# Task 07 — Login with JWT and Authorization Header
+# Task 07 — Login with JWT
 
 ---
 
@@ -8,29 +8,20 @@
 |---|---|
 | **Level** | 🟡 Intermediate |
 | **Estimated Duration** | 3 Days |
-| **Type** | Full Stack |
-| **Depends On** | Task 06 — Add Roles, Claims & Users |
-| **Deliverable** | Login page + JWT + header auth |
+| **Type** | Backend Only |
+| **Depends On** | Task 06 — Add Roles, Claims & Users API |
+| **Deliverable** | JWT issuing endpoint for authenticated users |
+| **Frontend Follow-Up** | Task 10 — Login Page & Auth State, Task 11 — HTTP Interceptor & API Error Handling |
 
 ---
 
 ## Goal
 
-Build login for the system. The backend should create a JWT token and return it in the response body. The frontend should attach it via the `Authorization: Bearer` header on subsequent requests and work with the login state and protected routes.
+Build backend login for the system. The API should validate credentials, create a JWT token, and return it in the response body for the frontend to use later.
 
 ---
 
 ## Required Technologies
-
-### Frontend — Angular
-| Technology | Description |
-|---|---|
-| **Reactive Forms** | Build the login form |
-| **HTTP Interceptor** | Send auth data with requests |
-| **Auth Guard** | Protect routes |
-| **localStorage / sessionStorage** | Store the token client-side |
-| **Auth Service** | Manage login state |
-| **BehaviorSubject** | Track current user state |
 
 ### Backend — ASP.NET Core
 | Technology | Description |
@@ -38,20 +29,11 @@ Build login for the system. The backend should create a JWT token and return it 
 | **JWT** | Authentication token |
 | **JwtBearer Middleware** | Validate the token |
 | **Claims in Token** | Save role and permissions |
-| **Authorization Header** | Send `Bearer <token>` with each request |
 | **Refresh Token** | Optional |
 
 ---
 
 ## Deliverables
-
-### Frontend — Angular
-- [ ] Create a `login` page with email and password
-- [ ] Create `AuthService` with `login()`, `logout()`, `isLoggedIn()`, and `getCurrentUser()`
-- [ ] Update the interceptor to send auth requests correctly
-- [ ] Create an `AuthGuard` for protected pages
-- [ ] Redirect to login when token is missing or expired
-- [ ] Add a logout button
 
 ### Backend — ASP.NET Core
 - [ ] Create `POST /api/auth/login`
@@ -80,13 +62,6 @@ The token must include: `sub` (user id), `email`, `fullName`, `role`, all user c
 
 ## Validation Requirements
 
-### Frontend
-| Field | Rules |
-|---|---|
-| **Email** | Required, valid email |
-| **Password** | Required, min 8 |
-
-### Backend
 | Case | Rule |
 |---|---|
 | Wrong email | Return `401 Unauthorized` with a general message |
@@ -98,12 +73,6 @@ Security note: do not return different messages for wrong email and wrong passwo
 ---
 
 ## Tips
-
-### Angular
-1. Store the token in `localStorage` or `sessionStorage` after login.
-2. Use an HTTP interceptor to attach `Authorization: Bearer <token>` to every outgoing request.
-3. Redirect to login on `401` responses.
-4. Use an auth guard for protected pages.
 
 ### Backend
 1. Use a strong secret key.

@@ -1,4 +1,4 @@
-# Task 04 — Change Product Status
+# Task 04 — Change Product Status + Audit History
 
 ---
 
@@ -8,27 +8,20 @@
 |---|---|
 | **Level** | 🟡 Intermediate |
 | **Estimated Duration** | 3 Days |
-| **Type** | Full Stack |
+| **Type** | Backend Only |
 | **Depends On** | Task 01 + Task 02 + Task 03 |
 | **Deliverable** | Product status feature + migration + history table |
+| **Frontend Follow-Up** | Task 15 — Change Product Status UI |
 
 ---
 
 ## Goal
 
-Add a status field to the product. A product can be available, out of stock, or discontinued. Save every status change in a history table with date and user.
+Add a status field to the product and save every status change in a history table with date and user.
 
 ---
 
 ## Required Technologies
-
-### Frontend — Angular
-| Technology | Description |
-|---|---|
-| **Toggle or Dropdown** | Change the product status |
-| **Status Badge** | Show the status with color |
-| **Reactive Forms** | Use a form if needed |
-| **Angular Pipe** | Show a clear status text |
 
 ### Backend — ASP.NET Core
 | Technology | Description |
@@ -41,12 +34,6 @@ Add a status field to the product. A product can be available, out of stock, or 
 ---
 
 ## Deliverables
-
-### Frontend — Angular
-- [ ] Show the product status in the product list
-- [ ] Add a button, toggle, or dropdown to change status
-- [ ] Create `productStatusPipe` to show a clear text
-- [ ] Show the status in the product details page
 
 ### Backend — ASP.NET Core
 - [ ] Add `Status` to the `Products` table
@@ -136,26 +123,15 @@ Return a paginated list of status history records with optional filters.
 
 ## Validation Requirements
 
-### Frontend
-| Case | Rule |
-|---|---|
-| Change status | Show a confirm message |
-| Same status | Do not allow the same value |
-
-### Backend
 | Case | Rule |
 |---|---|
 | Status value | Must be a valid enum value |
-| Product | Return 404 if not found |
-| Same status | Return 400 Bad Request |
+| Product | Return `404 Not Found` if not found |
+| Same status | Return `400 Bad Request` |
 
 ---
 
 ## Tips
-
-### Angular
-1. Use `ngClass` to change badge colors.
-2. A custom pipe makes the status easy to read.
 
 ### Backend
 1. Give the new `Status` column a default value in the migration.

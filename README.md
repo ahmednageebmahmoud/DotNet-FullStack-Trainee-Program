@@ -1,6 +1,6 @@
 # Training Tasks — Angular & .NET
 
-A structured series of full-stack training tasks for interns learning Angular and ASP.NET Core.
+A structured training path for interns learning Angular and ASP.NET Core. The work is now split into two phases: backend first, then frontend.
 
 ---
 
@@ -29,29 +29,50 @@ Before starting the tasks, watch the following videos to get familiar with the r
 
 ---
 
-## Tasks
+## Workflow
+
+Trainees must complete all backend tasks first, in order from Task 01 to Task 09. After the backend is finished and reviewed, they move to the frontend track from Task 10 to Task 18.
+
+## Phase 1 — Backend Tasks
 
 | # | Task | Level | Days | Status |
 |---|---|---|---|---|
-| 01 | [Add Product](tasks/task-01-add-product.md) | 🟢 Beginner | 4 Days | ✅ Available |
-| 02 | [Display Products + Pagination](tasks/task-02-display-products.md) | 🟡 Beginner to Intermediate | 3 Days | ✅ Available |
-| 03 | [Soft Delete, Interceptor & Delete Endpoint](tasks/task-03-soft-delete-interceptor.md) | 🟡 Beginner to Intermediate | 1–2 Days | ✅ Available |
+| 01 | [Add Product API & Persistence](tasks/task-01-add-product.md) | 🟢 Beginner | 4 Days | ✅ Available |
+| 02 | [Display Products API + Pagination](tasks/task-02-display-products.md) | 🟡 Beginner to Intermediate | 3 Days | ✅ Available |
+| 03 | [Soft Delete Interceptor & Delete Endpoint](tasks/task-03-soft-delete-interceptor.md) | 🟡 Beginner to Intermediate | 1–2 Days | ✅ Available |
 | 04 | [Change Product Status + Audit History](tasks/task-04-change-product-status.md) | 🟡 Intermediate | 3 Days | ✅ Available |
 | 05 | [Refactor and Apply CQRS](tasks/task-05-cqrs-refactor.md) | 🔴 Advanced | 4 Days | ✅ Locked |
-| 06 | [Add Roles, Claims & Users](tasks/task-06-roles-and-users.md) | 🟡 Intermediate | 5 Days | ✅ Available |
-| 07 | [Login with JWT and Cookie](tasks/task-07-login-jwt.md) | 🟡 Intermediate | 3 Days | ✅ Available |
+| 06 | [Add Roles, Claims & Users API](tasks/task-06-roles-and-users.md) | 🟡 Intermediate | 5 Days | ✅ Available |
+| 07 | [Login with JWT](tasks/task-07-login-jwt.md) | 🟡 Intermediate | 3 Days | ✅ Available |
 | 08 | [Apply Authorization](tasks/task-08-apply-authorization.md) | 🔴 Advanced | 5 Days | ✅ Available |
-| 09 | [Statistics Dashboard](tasks/task-09-statistics-dashboard.md) | 🟡 Intermediate | 3 Days | ✅ Available |
+| 09 | [Statistics API](tasks/task-09-statistics-dashboard.md) | 🟡 Intermediate | 3 Days | ✅ Available |
 
-> Locked tasks will be released one by one as each task is completed and reviewed.
+## Phase 2 — Frontend Tasks
+
+| # | Task | Level | Days | Status |
+|---|---|---|---|---|
+| 10 | [Login Page & Auth State](tasks/task-10-login-authentication.md) | 🟢 Beginner to Intermediate | 2 Days | ✅ Available |
+| 11 | [HTTP Interceptor & API Error Handling](tasks/task-11-http-interceptor-and-error-handling.md) | 🟡 Intermediate | 2 Days | 🔒 Locked |
+| 12 | [Add Product Page](tasks/task-12-add-product-ui.md) | 🟢 Beginner | 2 Days | 🔒 Locked |
+| 13 | [Display Products + Pagination UI](tasks/task-13-display-products-and-pagination-ui.md) | 🟡 Beginner to Intermediate | 3 Days | 🔒 Locked |
+| 14 | [Soft Delete UX](tasks/task-14-soft-delete-ui.md) | 🟡 Beginner to Intermediate | 1 Day | 🔒 Locked |
+| 15 | [Change Product Status UI](tasks/task-15-change-product-status-ui.md) | 🟡 Intermediate | 2 Days | 🔒 Locked |
+| 16 | [Roles & Users UI](tasks/task-16-roles-and-users-ui.md) | 🟡 Intermediate | 3 Days | 🔒 Locked |
+| 17 | [Frontend Authorization](tasks/task-17-apply-frontend-authorization.md) | 🔴 Advanced | 3 Days | 🔒 Locked |
+| 18 | [Statistics Dashboard UI](tasks/task-18-statistics-dashboard-ui.md) | 🟡 Intermediate | 2 Days | 🔒 Locked |
+
+> Backend tasks are completed and reviewed first. Frontend tasks start only after Task 09 is finished.
+
+> Tasks 11–18 are currently ignored and locked in this README. Release them only when you want to continue beyond Task 10.
 
 ---
 
 ## General Rules
 
-- Complete every task from start to finish before moving on.
-- Validation is required on both frontend and backend.
-- Submission must include Swagger and a Postman collection.
+- Complete the backend phase in order before starting the frontend phase.
+- Complete each task from start to finish before moving on.
+- Backend submissions must include Swagger and a Postman collection.
+- Frontend submissions must include proper form, route, and state validation.
 - Keep the code in clear feature folders.
 - Do not use magic strings — use constants.
 - Do not put business logic in controllers.
@@ -60,13 +81,7 @@ Before starting the tasks, watch the following videos to get familiar with the r
 
 ## Rough Timeline
 
-| Week | Tasks |
+| Phase | Tasks |
 |---|---|
-| Week 1–2 | Task 01 → Task 02 → Task 03 — Basics (CRUD + Soft Delete + Pagination) |
-| Week 3 | Task 04 — Enums + Audit History |
-| Week 4 | Task 05 — CQRS + MediatR |
-| Week 5 | Task 06 — Identity + Roles + Users |
-| Week 6 | Task 07 + Task 08 — JWT + Authorization |
-| Week 7 | Task 09 — Dashboard + Final Polish |
-
-**Total: ~31–32 work days (~6–7 weeks)**
+| Phase 1 | Task 01 → Task 09 — Backend foundation: products, persistence, CQRS, identity, auth, and statistics API |
+| Phase 2 | Task 10 → Task 18 — Frontend implementation: login, interceptors, product screens, users, authorization, and dashboard |

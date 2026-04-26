@@ -1,4 +1,4 @@
-# Task 06 — Add Roles, Claims & Users
+# Task 06 — Add Roles, Claims & Users API
 
 ---
 
@@ -8,27 +8,20 @@
 |---|---|
 | **Level** | 🟡 Intermediate |
 | **Estimated Duration** | 5 Days |
-| **Type** | Full Stack |
+| **Type** | Backend Only |
 | **Depends On** | Task 05 — Refactor and Apply CQRS |
-| **Deliverable** | ASP.NET Core Identity + roles + claims + users page |
+| **Deliverable** | ASP.NET Core Identity + roles + claims + users API |
+| **Frontend Follow-Up** | Task 16 — Roles & Users UI |
 
 ---
 
 ## Goal
 
-Set up roles and claims with ASP.NET Core Identity. Create roles for the system and connect permissions to each role. Then build a page to add a new user and choose a role for that user, and a page to show the users list.
+Set up roles and claims with ASP.NET Core Identity. Create roles for the system, connect permissions to each role, and expose endpoints for roles and users.
 
 ---
 
 ## Required Technologies
-
-### Frontend — Angular
-| Technology | Description |
-|---|---|
-| **Reactive Forms** | Build the add user form |
-| **Dropdown** | Choose a role |
-| **Password Strength Indicator** | Show password strength |
-| **Tailwind CSS** | Style the page |
 
 ### Backend — ASP.NET Core
 | Technology | Description |
@@ -64,14 +57,6 @@ Set up roles and claims with ASP.NET Core Identity. Create roles for the system 
 - [ ] Create `GET /api/users/{id}`
 - [ ] Check that the role exists before create
 - [ ] Check that the email is unique
-
-### Frontend — Angular
-- [ ] Create an `add-user` page with a Reactive Form
-- [ ] Load roles into a dropdown from the API
-- [ ] Show a password strength indicator
-- [ ] Add confirm password validation
-- [ ] Create a `users-list` page
-- [ ] Connect the forms to the API
 
 ### Expected Folder Structure
 
@@ -205,19 +190,14 @@ using (var scope = app.Services.CreateScope())
 
 This approach is safe to run many times — it will never create duplicate roles or claims.
 
-### Frontend
-| Field | Rules |
-|---|---|
-| **FullName** | Required, min 3, max 100 |
-| **Email** | Required, valid email |
-| **Password** | Required, min 8, upper + lower + number + symbol |
-| **ConfirmPassword** | Must match password |
-| **Role** | Required |
-
 ### Backend
 | Validator or Case | Rules |
 |---|---|
-| `CreateUserCommandValidator` | Same rules as frontend |
+| `CreateUserCommandValidator` | `FullName` required, min 3, max 100 |
+| `CreateUserCommandValidator` | `Email` required and valid |
+| `CreateUserCommandValidator` | `Password` required, min 8, upper + lower + number + symbol |
+| `CreateUserCommandValidator` | `ConfirmPassword` must match `Password` |
+| `CreateUserCommandValidator` | `Role` is required |
 | Email | Must be unique |
 | Role | Must exist |
 
@@ -237,8 +217,3 @@ At least 8 characters with a mix of uppercase, lowercase, number, and special ch
 5. Check `IdentityResult` after `CreateAsync()`.
 6. Add the role after the user is created.
 7. Using email as username is a common choice.
-
-### Angular
-1. Put the password match validator on the whole form group.
-2. Load roles from the API, not from hard-coded values.
-3. Show password strength with simple text or color.

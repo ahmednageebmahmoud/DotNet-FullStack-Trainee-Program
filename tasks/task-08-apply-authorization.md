@@ -8,28 +8,20 @@
 |---|---|
 | **Level** | 🔴 Advanced |
 | **Estimated Duration** | 5 Days |
-| **Type** | Full Stack |
-| **Depends On** | Task 07 — Login with JWT and Cookie |
-| **Deliverable** | Full authorization in frontend and backend |
+| **Type** | Backend Only |
+| **Depends On** | Task 07 — Login with JWT |
+| **Deliverable** | Claims-based API authorization |
+| **Frontend Follow-Up** | Task 17 — Frontend Authorization |
 
 ---
 
 ## Goal
 
-Apply permissions to pages, buttons, routes, and API endpoints. Each user should only see and use what is allowed for that user.
+Apply permissions to API endpoints. Each user should only access backend resources that are allowed for that user.
 
 ---
 
 ## Required Technologies
-
-### Frontend — Angular
-| Technology | Description |
-|---|---|
-| **Route Guards** | Protect routes |
-| **Custom Directive** | Show or hide elements by permission |
-| **Auth Service** | Read user claims |
-| **Navigation Menu** | Show menu items by permission |
-| **Role-based UI** | Show the right buttons for each user |
 
 ### Backend — ASP.NET Core
 | Technology | Description |
@@ -43,26 +35,6 @@ Apply permissions to pages, buttons, routes, and API endpoints. Each user should
 
 ## Deliverables
 
-### Frontend — Angular
-- [ ] Create a dynamic `NavMenuComponent`
-- [ ] Show product pages only for `products:view`
-- [ ] Show add product page only for `products:create`
-- [ ] Show users page only for `users:view`
-- [ ] Create a route guard that checks the required claim
-- [ ] Redirect to `/forbidden` when access is denied
-- [ ] Create a simple `forbidden` page
-- [ ] Create `*appHasPermission="'products:create'"`
-- [ ] Hide DOM elements when the user has no permission
-
-### Permission Map
-| Button or Link | Required Permission |
-|---|---|
-| Add Product | `products:create` |
-| Delete Product | `products:delete` |
-| Change Status | `products:change-status` |
-| Add User | `users:create` |
-| Statistics | `statistics:view` |
-
 ### Backend — ASP.NET Core
 - [ ] Create authorization policies in `Program.cs`
 - [ ] Protect `GET /api/products`
@@ -71,44 +43,42 @@ Apply permissions to pages, buttons, routes, and API endpoints. Each user should
 - [ ] Protect `PATCH /api/products/{id}/status`
 - [ ] Protect `GET /api/users`
 - [ ] Protect `POST /api/users`
+- [ ] Protect `GET /api/statistics`
 - [ ] Return `403 Forbidden` with a clear message when needed
+
+### Endpoint Permission Map
+| Endpoint | Required Permission |
+|---|---|
+| `GET /api/products` | `products:view` |
+| `POST /api/products` | `products:create` |
+| `DELETE /api/products/{id}` | `products:delete` |
+| `PATCH /api/products/{id}/status` | `products:change-status` |
+| `GET /api/users` | `users:view` |
+| `POST /api/users` | `users:create` |
+| `GET /api/statistics` | `statistics:view` |
 
 ---
 
 ## Hints
 
-- Create a structural directive (using `*` syntax) that reads the current user's claims from `AuthService` and either renders or removes the element from the DOM entirely.
-- Build the navigation menu from a list of items where each item has a required permission — filter the list at render time.
 - Register one authorization policy per claim string in `Program.cs`.
-- Claims from the JWT are available via `HttpContext.User` in backend handlers and controllers.
+- Claims from the JWT are available via `HttpContext.User` in handlers and controllers.
+- Keep authorization rules close to the endpoint or handler that requires them.
 
 ---
 
 ## Validation Requirements
 
-### Frontend
-| Case | Rule |
-|---|---|
-| User without `products:delete` | Delete button should not be in the DOM |
-| Route without permission | Redirect to `/forbidden` |
-| Expired token | Redirect to `/login` |
-
-### Backend
 | Case | Rule |
 |---|---|
 | Token exists but claim is missing | Return `403 Forbidden` |
 | Token is missing or expired | Return `401 Unauthorized` |
 
-Security note: hiding a button in Angular is only for UI. Real protection must be in the backend.
+Security note: UI visibility is not real protection. The backend must enforce all permissions.
 
 ---
 
 ## Tips
-
-### Angular
-1. Use a structural directive, not only `[hidden]`.
-2. Keep claims in the auth service after login.
-3. Build the menu from a list of items with permissions.
 
 ### Backend
 1. Claims from JWT are available in `HttpContext.User`.
