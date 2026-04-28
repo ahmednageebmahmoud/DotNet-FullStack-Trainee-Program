@@ -52,8 +52,8 @@ Trainees must complete all backend tasks first, in order from Task 01 to Task 09
 | # | Task | Level | Days | Status |
 |---|---|---|---|---|
 | 10 | [Login Page & Auth State](tasks/task-10-login-authentication.md) | 🟢 Beginner to Intermediate | 2 Days | ✅ Available |
-| 11 | [HTTP Interceptor & API Error Handling](tasks/task-11-http-interceptor-and-error-handling.md) | 🟡 Intermediate | 2 Days | 🔒 Locked |
-| 12 | [Add Product Page](tasks/task-12-add-product-ui.md) | 🟢 Beginner | 2 Days | 🔒 Locked |
+| 11 | [HTTP Interceptor & API Error Handling](tasks/task-11-http-interceptor-and-error-handling.md) | 🟡 Intermediate | 2 Days | ✅ Available |
+| 12 | [Add Product Page](tasks/task-12-add-product-ui.md) | 🟢 Beginner | 2 Days | ✅ Available |
 | 13 | [Display Products + Pagination UI](tasks/task-13-display-products-and-pagination-ui.md) | 🟡 Beginner to Intermediate | 3 Days | 🔒 Locked |
 | 14 | [Soft Delete UX](tasks/task-14-soft-delete-ui.md) | 🟡 Beginner to Intermediate | 1 Day | 🔒 Locked |
 | 15 | [Change Product Status UI](tasks/task-15-change-product-status-ui.md) | 🟡 Intermediate | 2 Days | 🔒 Locked |
