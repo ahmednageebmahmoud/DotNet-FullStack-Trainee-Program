@@ -57,9 +57,9 @@ Trainees must complete all backend tasks first, in order from Task 01 to Task 09
 | 13 | [Display Products + Pagination UI](tasks/task-13-display-products-and-pagination-ui.md) | 🟡 Beginner to Intermediate | 3 Days | ✅ Available |
 | 14 | [Soft Delete UX](tasks/task-14-soft-delete-ui.md) | 🟡 Beginner to Intermediate | 1 Day |  ✅ Available |
 | 15 | [Change Product Status UI](tasks/task-15-change-product-status-ui.md) | 🟡 Intermediate | 2 Days | ✅ Available |
-| 16 | [Roles & Users UI](tasks/task-16-roles-and-users-ui.md) | 🟡 Intermediate | 3 Days | 🔒 Locked |
-| 17 | [Frontend Authorization](tasks/task-17-apply-frontend-authorization.md) | 🔴 Advanced | 3 Days | 🔒 Locked |
-| 18 | [Statistics Dashboard UI](tasks/task-18-statistics-dashboard-ui.md) | 🟡 Intermediate | 2 Days | 🔒 Locked |
+| 16 | [Roles & Users UI](tasks/task-16-roles-and-users-ui.md) | 🟡 Intermediate | 3 Days | ✅ Available |
+| 17 | [Frontend Authorization](tasks/task-17-apply-frontend-authorization.md) | 🔴 Advanced | 3 Days | ✅ Available |
+| 18 | [Statistics Dashboard UI](tasks/task-18-statistics-dashboard-ui.md) | 🟡 Intermediate | 2 Days | ✅ Available |
 
 > Backend tasks are completed and reviewed first. Frontend tasks start only after Task 09 is finished.
 
