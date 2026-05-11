@@ -1,6 +1,6 @@
 # Training Tasks — Angular & .NET
 
-A structured training path for interns learning Angular and ASP.NET Core. The work is now split into two phases: backend first, then frontend.
+A structured training path for interns learning Angular and ASP.NET Core. The work is split into backend, frontend, final refactor, and local IIS deployment phases.
 
 ---
 
@@ -31,7 +31,7 @@ Before starting the tasks, watch the following videos to get familiar with the r
 
 ## Workflow
 
-Trainees must complete all backend tasks first, in order from Task 01 to Task 09. After the backend is finished and reviewed, they move to the frontend track from Task 10 to Task 18.
+Trainees must complete all backend tasks first, in order from Task 01 to Task 09. After the backend is finished and reviewed, they move to the frontend track from Task 10 to Task 18, then complete the final refactor and local IIS deployment tasks.
 
 ## Phase 1 — Backend Tasks
 
@@ -61,9 +61,21 @@ Trainees must complete all backend tasks first, in order from Task 01 to Task 09
 | 17 | [Frontend Authorization](tasks/task-17-apply-frontend-authorization.md) | 🔴 Advanced | 3 Days | ✅ Available |
 | 18 | [Statistics Dashboard UI](tasks/task-18-statistics-dashboard-ui.md) | 🟡 Intermediate | 2 Days | ✅ Available |
 
+## Phase 3 - Final Refactor
+
+| # | Task | Level | Days | Status |
+|---|---|---|---|---|
+| 19 | [Backend and Frontend Refactor](tasks/task-19-backend-and-frontend-refactor.md) | Advanced | 3 Days | Available |
+
+## Phase 4 - Local IIS Deployment
+
+| # | Task | Level | Days | Status |
+|---|---|---|---|---|
+| 20 | [Deploy Backend and Frontend on Local IIS](tasks/task-20-deploy-backend-and-frontend-local-iis.md) | Intermediate | 2 Days | Available |
+
 > Backend tasks are completed and reviewed first. Frontend tasks start only after Task 09 is finished.
 
-> Tasks 11–18 are currently ignored and locked in this README. Release them only when you want to continue beyond Task 10.
+> Tasks 19 and 20 should be completed after the frontend phase is finished and reviewed.
 
 ---
 
@@ -85,3 +97,5 @@ Trainees must complete all backend tasks first, in order from Task 01 to Task 09
 |---|---|
 | Phase 1 | Task 01 → Task 09 — Backend foundation: products, persistence, CQRS, identity, auth, and statistics API |
 | Phase 2 | Task 10 → Task 18 — Frontend implementation: login, interceptors, product screens, users, authorization, and dashboard |
+| Phase 3 | Task 19 — Final backend and frontend refactor |
+| Phase 4 | Task 20 — Local IIS deployment |

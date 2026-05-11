@@ -23,6 +23,8 @@ This is a training plan for interns. They will first build the backend with ASP.
 1. Complete backend tasks from Task 01 to Task 09.
 2. Review and approve the backend implementation.
 3. Start frontend tasks from Task 10 to Task 18.
+4. Complete the final backend and frontend refactor in Task 19.
+5. Deploy the backend and frontend locally on IIS in Task 20.
 
 ## Phase 1 — Backend Tasks
 
@@ -54,11 +56,29 @@ This is a training plan for interns. They will first build the backend with ASP.
 
 ---
 
+## Phase 3 - Final Refactor
+
+| # | Task | Level | Days | Depends On |
+|---|---|---|---|---|
+| 19 | [Backend and Frontend Refactor](task-19-backend-and-frontend-refactor.md) | Advanced | 3 Days | Task 09 + Task 18 |
+
+---
+
+## Phase 4 - Local IIS Deployment
+
+| # | Task | Level | Days | Depends On |
+|---|---|---|---|---|
+| 20 | [Deploy Backend and Frontend on Local IIS](task-20-deploy-backend-and-frontend-local-iis.md) | Intermediate | 2 Days | Task 19 |
+
+---
+
 ## Rough Timeline
 
 ```text
 Phase 1:   Task 01 -> Task 09            -> Backend foundation first
 Phase 2:   Task 10 -> Task 18            -> Frontend implementation second
+Phase 3:   Task 19                       -> Final backend and frontend refactor
+Phase 4:   Task 20                       -> Local IIS deployment
 ```
 
 ---
